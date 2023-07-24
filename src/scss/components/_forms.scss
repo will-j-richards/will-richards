@@ -112,8 +112,9 @@ fieldset {
   width: 14px
 }
 
-legend {
-  @include margin($top: scut-rem($md), $bottom: scut-rem($xs));
-}
 
+
+h2.form-content {
+  @include margin($top: scut-rem($md), $bottom: scut-rem($sm));
+}
 
