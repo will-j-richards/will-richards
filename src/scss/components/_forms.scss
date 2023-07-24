@@ -115,7 +115,7 @@ fieldset {
 
 
 h2.form-content {
-  @include padding($top: scut-rem($md), $bottom: scut-rem($sm));
+  @include padding($top: scut-rem($sm), $bottom: scut-rem($xs));
   margin: 0;
   display: block;
 }
