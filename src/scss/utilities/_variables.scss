@@ -1,0 +1,57 @@
+// ============================
+// Variables
+// ============================
+
+// Colour pallete
+$white: #fff;
+$dark-grey: #333333;
+$mid-grey: #666666;
+$light-grey: #CCCCCC;
+$indigo: #9013FE;
+$blue: #4949F2;
+$orange: #F29A0C;
+$yellow: #FFD605;
+$red: #D70000;
+$green: #327214;
+$paper: #FEF9F5;
+
+//Typography
+$base-font: 18px;
+
+// Fonts
+$font-stack: 'Inter var', sans-serif;
+
+// type, font-size, font-weight, weight, line-spacing
+$type-matrix: (
+    ( jupiter,   60, 700, 72, 0.56 ),
+    ( saturn,   48, 700, 58, 0.56 ),
+    ( neptune,   36, 700, 44, 0.56 ),
+    ( uranus,   28, 700, 36, 0.56 ),
+    ( venus,   24, 500, 32, 0.56 ),
+    ( earth, 20, 400, 31, 0.56 ),
+    ( mars, 18, 400, 28, 0.56 ),
+    ( mercury, 14, 400, 22, 0.56 )
+  );
+
+
+//Breakpoints
+  $breakpoints: (
+    xs : 767px,
+    sm : 768px,
+    md : 992px,
+    lg : 1448px
+);
+
+//Navigation states
+
+$nav-link : $dark-grey;
+$nav-hover : $blue;
+$nav-visited: $dark-grey;
+$nav-active : $dark-grey;
+
+
+
+$xs: 18;
+$sm: 36;
+$md: 44;
+$lg: 52;

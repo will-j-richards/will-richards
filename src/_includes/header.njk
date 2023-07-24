@@ -1,0 +1,15 @@
+<header>
+  <nav role="navigation">
+    {% if page.url == '/' %}
+        <h1>
+          {{siteData.name}}
+        </h1>
+      {% else %}
+        <h1>
+        <a href="/">{{siteData.name}}</a>
+        </h1>
+    {% endif %}
+  <button class="menubutton" id="toggle" aria-expanded="false" aria-label="Show menu">Menu</button>
+  {% include 'nav.njk' %}
+  </nav>
+</header>

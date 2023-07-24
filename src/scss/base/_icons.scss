@@ -1,0 +1,17 @@
+// ======================================
+//  Icons
+// ======================================
+
+.pagination-icon {
+  &-next, &-prev {
+  height: scut-rem(24);
+  width: scut-rem(24);
+  vertical-align: middle;
+  }
+  &-next {
+    @include margin($left: scut-rem(calc($xs / 2)));
+  }
+  &-prev {
+    @include margin($right: scut-rem(calc($xs / 2)));
+  }
+}

@@ -1,0 +1,63 @@
+// ======================================
+//  Media
+// ======================================
+
+.media {
+    background-color: $yellow;
+    display: block;
+  }
+  
+  .media-container {
+    margin: 0;
+    background-color: $dark-grey;
+    display: block;
+    transition: 0.3s;
+    opacity: 0.9;
+  
+    a {
+      @include zero;
+    }
+    
+    img {
+      transition: 0.3s;
+      filter: grayscale(100%);
+    }
+  
+    img:hover {
+      transition: 0.3s;
+      filter: grayscale(0%);
+    }
+  }
+
+  .small-img {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    background-color: $yellow;
+    margin-bottom: scut-rem($sm);
+  
+    picture {
+      display: block;
+      margin: 0;
+      background-color: $orange;
+      transition: 0.3s;
+      opacity: 0.9;
+    }
+  
+    img {
+      mix-blend-mode: normal;
+      filter: contrast(1.1) grayscale(100%);
+    }
+  }
+
+.main-img {
+  @include margin($bottom: scut-rem($sm));
+    &:not(:first-child) {
+      @include margin($top: scut-rem($sm));
+    }
+}
+
+.main-img img {
+  border: 1px solid;
+  border-color: $light-grey;
+}

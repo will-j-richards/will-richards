@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Contact
+---
+
+
+
+<div class="headline">
+        <h1>{{title}}</h1>
+</div>
+<div class="content">
+<p class="form-content">
+    If you would like to discuss my work further or talk about potential projects, please feel free to submit your contact details. 
+</p>
+<p class="form-content">
+     Additionally, you can connect with me via <a href="https://www.linkedin.com/in/will-j-richards/" aria-label="Linkedin">LinkedIn</a>.
+</p>
+<form action="https://getform.io/f/6d362700-0497-4a54-af52-92fa40e16742" method="POST">
+  <fieldset>
+    <legend>
+      <h2 class="form-content">Your contact details</h2>
+    </legend>
+    <label class="form-input-label" aria-label="Full name" for="name">Full name</label>
+    <input class="form-input" type="text" name="name" id="name">
+
+    <label class="form-input-label" aria-label="Email address" for="email">Email address</label>
+    <input class="form-input" type="email" name="email" id="email">
+
+    <label class="form-input-label" aria-label="Message" for="feedback">Message</label>
+    <textarea class="form-input-textarea" id="feedback" name="feedback" rows="8"></textarea>
+    <!-- add hidden Honeypot input to prevent spams -->
+    <input type="hidden" name="_gotcha" style="display:none !important">
+
+    <button id="formbutton" class="formbutton" type="submit">Send contact details</button>
+  </fieldset>
+</form>
+</div>

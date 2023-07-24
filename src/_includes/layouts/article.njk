@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+
+
+<div class="headline">
+        <h1><span class="client">{{client}}</span><span class="title">{{title}}</title></h1>
+</div>
+<div class="content">
+        {{ content | safe }}
+        {% include 'articlenav.njk' %}
+</div>

@@ -1,0 +1,42 @@
+// ======================================
+//  Navigation
+// ======================================
+
+nav {
+    @include typeset(earth);
+    h1 {
+        font-size: scut-rem(22);
+        line-height: scut-rem(30);
+        display: inline;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-bottom: scut-rem(6);
+        margin-top: scut-rem(20);
+        display: block;
+        border-bottom: solid 2px #333333;
+    }
+    li {
+        margin-bottom: scut-rem(20);
+        line-height: scut-rem(30);
+    }
+    button {
+        margin-top: scut-rem(-9);
+    }
+    @include nav-states;
+}
+
+.js ul {
+    display: none;
+    }
+
+    .js button {
+    display: block;
+    }
+
+    ul.is-active {
+    display: block;
+    margin-bottom: scut-rem(20);
+}

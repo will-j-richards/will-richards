@@ -1,0 +1,157 @@
+// =========================================
+//  Mixins
+// =========================================
+
+ 
+// Create grid
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin grid-col($col: null, $row: null) {
+  grid-column: $col;
+  grid-row: $row;
+}
+
+@mixin typeset( $level: body ) {
+    @each $item in $type-matrix {
+      @if $level == nth($item, 1) {
+        font-size: scut-rem(nth($item, 2));
+        @if nth($item, 3) != "normal" {
+          font-weight: nth($item, 3);
+        }
+        @if length($item) >= 4 {
+          line-height: scut-rem(nth($item, 4));
+        }
+        @if length($item) >= 5 {
+        letter-spacing: scut-rem(nth($item, 5));
+      }
+    }
+  }
+}
+
+@mixin circle($circle-dim) {
+    background: $orange;
+    border-radius: 50%;
+    width: $circle-dim;
+    height: $circle-dim;
+}
+
+
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin nav-states {
+    a { 
+        color: $nav-link;
+        text-decoration: none;
+        padding: scut-rem(2);
+        border: 0;
+        &:visited {
+        color: $nav-visited;
+        }
+        &:hover {
+        color: $nav-hover;
+        border-bottom: solid scut-rem(2) $blue;
+        }
+        &:active {
+        color: $nav-active;
+        }
+        &:focus {
+        color: $nav-active;
+        background-color: $yellow;
+        margin-left: 10px;
+        border-bottom: solid 2px $dark-grey;
+        outline:0;
+        box-shadow: 0 0 0 scut-rem(10) $yellow;
+        }
+    }
+}
+  
+@mixin inline-links {
+  a { 
+      color: $blue;
+      text-decoration: none;   
+      padding: scut-rem(2);
+      border-bottom: solid scut-rem(2) $blue;
+      &:visited {
+      color:$blue;
+      }
+      &:hover {
+      color: $dark-grey;
+      border-bottom: solid scut-rem(2) $dark-grey;
+      }
+      &:active {
+      color: $nav-active;
+      }
+      &:focus {
+      color: $nav-active;
+      background-color: $yellow;
+      border: 0;
+      outline:0;
+      border-bottom: solid scut-rem(2) $dark-grey;
+      box-shadow: 0 0 0 scut-rem(0) $yellow;
+      }
+  }
+}
+
+  
+@mixin headline ($height){
+    .headline {
+        margin-top: $height;
+    }
+}
+
+@mixin zero {
+  border: 0;
+  padding: 0;
+}
+
+@mixin margin-top ($height){
+  margin-top: $height;
+}
+
+@mixin margin-bottom ($height){
+  margin-top: $height;
+}
+
+@mixin mobile-nav() {
+    .js ul {
+        display: inline;
+    }
+    
+    .js button#toggle {
+        display: none;
+    }
+    
+    nav {
+        padding: 0;
+        padding-left: 0;
+      
+    h1 {
+        display: inline;
+        margin-right: scut-rem(30);
+    }
+
+    ul {
+        border: 0;
+    }
+      
+    li {
+        display: inline-block;
+        margin-right: scut-rem(23);
+      }
+    }
+  }

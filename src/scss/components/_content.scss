@@ -1,0 +1,42 @@
+// ======================================
+//  Content
+// ======================================
+
+.content {
+    @include margin($top: scut-rem($xs));
+}
+
+.about-content {
+  @include margin($bottom: scut-rem($md));
+}
+
+.article-content, .about-content p {
+    @include margin($bottom: scut-rem($xs));
+}
+
+
+h2.article-content {
+    @include margin($top: scut-rem($sm), $bottom: scut-rem($xs));
+    &:first-of-type {
+      margin-top: 0;
+    }
+}
+
+.about-content h2 {
+  @include margin($top: scut-rem($md), $bottom: scut-rem($sm));
+  @include typeset(venus);
+  font-weight: 700;
+}
+
+ul.about-list {
+  display: block;
+  list-style-type: '\27F6';
+  padding: 0;
+  @include padding($bottom: scut-rem($md));
+}
+
+.about-list li {
+  margin-left: 1.5rem;
+  @include margin($bottom: scut-rem($xs));
+  @include padding($left: scut-rem($xs));
+}

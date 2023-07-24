@@ -1,0 +1,10 @@
+// ======================================
+//  Header
+// ======================================
+
+
+header {
+    @include padding($top: scut-rem(30));
+    background: $white;
+    z-index: 10;
+}

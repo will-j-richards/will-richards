@@ -1,0 +1,100 @@
+// ======================================
+//  Base
+// ======================================
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+    background: $white;
+    z-index: 10;
+    @include padding($top: scut-rem($xs*0.5), $bottom: scut-rem($xs));
+}
+
+body {
+  height: 100%;
+  color: $dark-grey;
+  font-family: $font-stack;
+  margin: 0;
+  background-image: url('../img/pattern-bg.svg');
+  background-color: $paper;
+  @include typeset(mars);
+  font-feature-settings: 'cv11' 1;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+}
+
+@include inline-links;
+
+p {
+  margin: 0;
+}
+
+h1 {
+  @include typeset(uranus);
+  margin: 0;
+}
+
+.headline .client {
+  @include typeset(mercury);
+  font-weight: 700;
+  color: $mid-grey;
+}
+
+h2 {
+  @include typeset(venus);
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0;
+  @include typeset(earth);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+hr {
+  border: 0;
+  height: scut-rem(2);
+  background: $dark-grey;
+}
+
+figure {
+  margin: 0;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture.cover-img img {
+  mix-blend-mode: normal;
+  filter: contrast(1.1);
+  filter: grayscale(100%);
+}
+
+
+figcaption {
+  @include typeset(mercury);
+  @include margin($top: scut-rem($xs*0.5));
+  cite {
+  font-style: normal;
+  }
+}
+
+#circle {
+  @include circle(scut-rem(30));
+}

@@ -1,0 +1,119 @@
+// ======================================
+//  Forms
+// ======================================
+
+.form-input, .form-input-textarea {
+  border: 2px solid $dark-grey;
+  border-radius: 0px;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  width: 100%;
+  @include margin($bottom: scut-rem($xs));
+
+  &-textarea {
+      line-height: normal;
+      resize: vertical;
+      width: 100%;
+      }
+  }
+
+.form-input-label {
+  @include typeset(mars);
+  display: block;
+  font-weight: 600;
+  @include margin($bottom: scut-rem($xs*0.5));
+}
+
+.form-input-textarea{
+line-height: normal;
+resize: vertical;
+width: 100%;
+}
+
+textarea {
+  overflow: auto;
+}
+
+fieldset {
+  @include zero;
+  @include margin($bottom: scut-rem($lg));
+}
+
+
+.form-input:focus, .form-input-textarea:focus {
+  -webkit-box-shadow: 0 0 0 1px $dark-grey,0 0 0 4px $yellow;
+  box-shadow: 0 0 0 1px $dark-grey,0 0 0 4px $yellow;
+  outline: 3px solid transparent;
+  outline-offset: 1px
+}
+
+.form-content, .form-content p {
+  @include margin($bottom: scut-rem($xs));
+}
+
+
+.form-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $white;
+  border: 2px solid $dark-grey;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 22px;
+  left: 11px;
+  position: absolute;
+  top: 14px;
+  width: 22px;
+}
+
+.form-checkbox:after {
+  opacity: 1;
+  border: solid 2px solid $dark-grey;
+  border-radius: 0;
+  border-top-color: 2px solid $dark-grey;
+  border-width: 0 0 3px 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+  height: 7px;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 14px;
+}
+
+
+.form-checkbox::after {
+  border: solid var(--ons-color-input-border);
+  border-radius: 1px;
+  border-top-color: var(--ons-color-input-bg);
+  border-width: 0 0 3px 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+  height: 6px;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: 1px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-90deg);
+  width: 14px
+}
+
+
+h2.form-content {
+  @include margin($top: scut-rem($xs), $bottom: scut-rem($xs));
+}
+

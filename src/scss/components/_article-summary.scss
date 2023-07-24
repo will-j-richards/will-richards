@@ -1,0 +1,20 @@
+// ======================================
+//  Article summary
+// ======================================
+
+.article-summary {
+    @include margin($bottom: scut-rem($sm));
+  
+    .media-container {
+      @include margin($bottom: scut-rem($xs));
+    }
+  
+    h2 {
+      @include typeset(venus);
+      @include margin($top: scut-rem($xs));
+    }
+  
+    p {
+      @include margin($top: scut-rem($xs));
+    }
+  }

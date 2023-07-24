@@ -1,0 +1,38 @@
+// ======================================
+//  Footer
+// ======================================
+
+
+footer {
+    .social-list {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &-item {
+            margin-right: scut-rem(20);
+            display: inline-block;
+            vertical-align: top;
+            a {
+                text-decoration: none;
+                padding: 0;
+                border: 0;
+                fill: rgba(255, 255, 255, 0.4);
+                &:hover {
+                fill: rgba(255, 255, 255, 1);
+                }
+                &:focus {
+                    fill: $yellow;
+                    outline: 0;
+                    box-shadow: 0 0 0 0;
+                }
+            }
+        }
+        &-icon {
+            height: scut-rem(30);
+            width: scut-rem(30);
+            display: block;
+        }
+    }
+
+}

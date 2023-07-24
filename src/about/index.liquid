@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: About
+about-images:
+  - img: "../media/will.png"
+    alt: "Will Richards"
+headline: A user-centred designer with 28 years experience.
+---
+
+
+
+<div class="headline">
+        <h1>{{headline}}</h1>
+</div>
+<div class="content">
+    <div class="about-photo">
+        <div class="small-img">
+            {% assign about = about-images[0] %}
+            {% myImage about.img about.alt 'about-img' %}
+        </div>
+    </div>
+    <div class="about-content">
+        <p>
+            In 1995, I graduated from Central St Martins with a BA Hons in Visual Communication. Since then, I have designed award-winning products and services across broadcast media, education, healthcare, and government.        </p>
+        <p>
+            I am passionate about user-centered design and its potential to create positive impacts on both society and the environment.        </p> 
+        <h2>
+            Stuff I enjoy doing:
+        </h2>
+        <ul class="about-list">
+                <li>Discovering what, who and identifying their primary needs</li>
+                <li>Facilitating stakeholder workshops</li>
+                <li>Organising and facilitating user research</li>
+                <li>Working within agile enviroments</li>
+                <li>Creating user journeys and flows through a service or product</li>
+                <li>Wireframing and sketching concepts</li>
+                <li>Engaging and collaborating with development teams</li>
+                <li>HTML protoyping or using kits such as <a href="https://prototype-kit.service.gov.uk/docs/" aria-label="ONS Design System">GOV.UK</a> or <a href="https://service-manual.ons.gov.uk/design-system/guidance/ons-prototype-kit" aria-label="ONS">ONS</a></li>
+                <li>Designing high fidelity prototypes in Figma or Adobe XD</li>
+        </ul>
+    </div>
+</div>

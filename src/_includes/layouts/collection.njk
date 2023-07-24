@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="headline">
+    <h1>{{title}}</h1>
+</div>
+<div class="content">
+{% for post in collections.work %}
+  {% include "article-summary.njk" %}
+{% endfor %}
+</div>

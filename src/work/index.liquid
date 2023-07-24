@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Work - A collection of projects 
+---
+<div class="headline">
+  <h1>{{ title }}</h1>
+</div>
+<div class="content">
+  {% for post in collections.work %}
+    <div class="article-summary">
+      <div class="media" tabindex="-1">
+        <div class="media-container">
+          <a href="{{ post.url }}" class="image-links" tabindex="-1">
+            {% myImage post.data.cover-img, post.data.title, 'cover-img' %}
+          </a>
+        </div>
+      </div>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <p>{{ post.data.summary }}</p>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,351 @@
+/* autoprefixer grid: on */
+
+/* grid */
+
+.grid {
+  min-height: 100%;
+  @include display-grid;
+  grid-template-columns: minmax(calc(calc(100% - #{map-get($breakpoints, xs)})/ 2),scut-rem(20)) repeat(4,1fr) minmax(calc(calc(100% - #{map-get($breakpoints, xs)})/ 2),scut-rem(20));
+  grid-template-rows: auto auto minmax(scut-rem(70),1fr) auto;
+  overflow: hidden;
+}
+
+header,
+main {
+  @include grid-col($col: #{2/6});
+  background: $white;
+  z-index: 15;
+}
+
+header{
+  grid-row: 1;
+  @include display-grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+main {
+  @include grid-col($row: 2);
+  @include display-grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+nav {
+  @include grid-col($col: #{1/6});
+}
+
+
+.collections-pagination {
+@include grid-col($col: #{1/6});
+}
+
+.headline, .content {
+  @include grid-col($col: #{1/5});
+}
+
+
+
+#left-spacer-row1 {
+  background: $white;
+  @include grid-col($col: 1);
+  z-index: 10;
+}
+
+#right-spacer-row1 {
+  background: $white;
+  @include grid-col($col: 6);
+  z-index: 10;
+}
+
+#left-spacer-row2 {
+  background: $white;
+  @include grid-col($col: 1, $row: 2);
+  z-index: 10;
+}
+
+#right-spacer-row2 {
+  background: $white;
+  @include grid-col($col: 6, $row: 2);
+  z-index: 10;
+}
+
+.shape1 {
+  background: $yellow;
+  @include grid-col($col: 2, $row: 3);
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+.shape2 {
+  @include grid-col($col: #{1/7}, $row: #{2/4});
+  background: $green;
+  margin: 0 0 0 scut-rem(-150);
+  width: 150%;
+  opacity: 0.4;
+  height: scut-rem(100);
+  transform: rotate(-15deg);
+  z-index: 3;
+}
+
+.shape3 {
+  @include grid-col($col: #{1/7}, $row: #{2/4});
+  background: $indigo;
+  height: 100%;
+  opacity: 0.5;
+  width: scut-rem(100);
+  transform: skew(80deg);
+  z-index: 1;
+}
+
+.shape4 {
+  @include grid-col($col: #{5/6}, $row: 3);
+  background: $indigo;
+  z-index: 2;
+  transform: skewX(45deg);
+  opacity: 0.9;
+}
+
+.shape5 {
+  @include grid-col($col: #{1/7}, $row: 3);
+  background: $red;
+  margin: 0 0 0 scut-rem(-150);
+  width: 150%;
+  height: scut-rem(5);
+  transform: rotate(-40deg);
+  z-index: 5;
+}
+
+
+
+#footer-left-spacer {
+  @include grid-col($col: 1, $row:4);
+  background: $dark-grey;
+  z-index: 10;
+}
+
+footer {
+  @include grid-col($col: #{2/6}, $row: 4);
+  padding: scut-rem(30) 0 scut-rem(30) 0;
+  background: $dark-grey;
+  z-index: 10;
+}
+
+#footer-right-spacer {
+  background: $dark-grey;
+  @include grid-col($col: 6, $row: 4);
+  grid-column: 6;
+  grid-row: 4;
+  z-index: 10;
+} 
+
+@mixin grid-sm() {
+  .grid {
+    grid-template-columns: minmax(calc(calc(100% - #{map-get($breakpoints, sm)})/ 2),scut-rem(20)) repeat(12,1fr) minmax(calc(calc(100% - #{map-get($breakpoints, sm)})/ 2),scut-rem(20));
+  }
+  header, main, .content {
+    @include display-grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+
+  .article-summary {
+    grid-column: span 6;
+  }
+
+  .about-content {
+    @include grid-col($col: #{4/13});
+  }
+
+  .article-content, .form-content, .form-checkbox {
+    @include grid-col($col: #{1/13});
+  }
+
+  form {
+    @include grid-col($col: #{1/13});
+  }
+
+  .about-photo {
+    @include grid-col($col: #{1/4});
+  }
+
+  .main-img , .collections-pagination {
+    @include grid-col($col: #{1/13});
+  }
+
+  nav {
+    @include grid-col($col: #{1/12});
+  }
+}
+
+@mixin grid-md() {
+  .grid {
+    grid-template-columns: minmax(calc(calc(100% - #{map-get($breakpoints, md)})/ 2),scut-rem(20)) repeat(12,1fr) minmax(calc(calc(100% - #{map-get($breakpoints, md)})/ 2),scut-rem(20));
+  }
+  header, main {
+    @include display-grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+  nav {
+    @include grid-col($col: #{2/12});
+  }
+}
+
+@mixin grid-lg() {
+  .grid {
+    grid-template-columns: minmax(calc(calc(100% - #{map-get($breakpoints, lg)})/ 2),scut-rem(20)) repeat(12,1fr) minmax(calc(calc(100% - #{map-get($breakpoints, lg)})/ 2),scut-rem(20));
+  }
+}
+
+
+/* columns and rows */
+
+
+@mixin grid-cols-sm(){
+  .grid {
+    grid-template-rows: auto auto minmax(scut-rem(100),1fr) auto;
+  }
+  
+  header, main {
+    @include grid-col($col: #{2/14});
+  }
+
+  .headline, #circle, .content {
+    @include grid-col($col: #{1/13});
+  }
+
+  .about-photo {
+    @include grid-col($col: #{1/4});
+  }
+
+  .profile {
+    @include grid-col($col: #{5/13});
+    display: block;
+  }
+
+
+  #left-spacer-row1 {
+    @include grid-col($col: 1);
+  }
+
+  #right-spacer-row1 {
+    @include grid-col($col: 14);
+  }
+
+  #left-spacer-row2 {
+    @include grid-col($col: 1, $row: 2);
+  }
+
+  #right-spacer-row2 {
+    @include grid-col($col: 14, $row: 2);
+  }
+
+  #footer-left-spacer {
+    @include grid-col($col: 1, $row: 4);
+  }
+
+  footer {
+    @include grid-col($col: #{2/14}, $row: 4);
+  }
+
+  #footer-right-spacer {
+    @include grid-col($col: 14, $row: 4);
+  }
+
+  .shape1 {
+    @include grid-col($col: #{2/4});
+  }
+
+  .shape2 {
+    @include grid-col($col: #{1/16});
+  }
+  .shape5 {
+    @include grid-col($col: #{1/16});
+    margin: 0 0 0 scut-rem(-300);
+  }
+}
+
+@mixin grid-cols-md(){
+  header {
+    @include grid-col($col: #{2/14});
+  }
+
+  main {
+    @include grid-col($col: #{2/14});
+  }
+ 
+  #left-spacer-row1 {
+    @include grid-col($col: #{1/2});
+  }
+
+  .headline, #circle, .content {
+    @include grid-col($col: #{2/12});
+  }
+
+  .article-content, .form-content {
+    @include grid-col($col: #{1/9});
+  }
+
+  form {
+    @include grid-col($col: #{1/9});
+  }
+
+  #right-spacer-row1 {
+    @include grid-col($col: #{14/15});
+    background: $white;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  #left-spacer-row2 {
+    @include grid-col($col: 1, $row: 2);
+    height: scut-rem(250);
+    background: $yellow;
+  }
+
+  #right-spacer-row2 {
+    @include grid-col($col: 14, $row: 2);
+    background: $yellow;
+    height: scut-rem(250); 
+    z-index: 0;
+  }
+
+  #footer-left-spacer {
+    @include grid-col($col: #{1/3}, $row: 4);
+  }
+
+  footer {
+    @include grid-col($col: #{3/13}, $row: 4);
+  }
+
+  #footer-right-spacer {
+    @include grid-col($col: #{13/15}, $row: 4);
+  }
+
+  .shape1 {
+    width: auto;
+    @include grid-col($col: #{3/5}, $row: 3);
+  } 
+  
+  .shape4 {
+    @include grid-col($col: 10, $row: 3);
+  }
+}
+
+
+@mixin grid-cols-lg(){
+
+  #left-spacer-row2 {
+    height: scut-rem(300);
+  }
+  #right-spacer-row2 {
+    height: scut-rem(300);
+  }
+
+.about-content {
+    @include grid-col($col: #{5/13});
+}
+
+
+.about-photo {
+    @include grid-col($col: #{1/5});
+  }
+}
+

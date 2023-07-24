@@ -1,0 +1,161 @@
+// ======================================
+//  Media queries
+// ======================================
+
+@media (min-width: map-get($breakpoints, sm)) {
+    @include grid-sm;
+    @include mobile-nav;
+    @include grid-cols-sm;
+
+    main {
+        @include padding(scut-rem(10), null, scut-rem(40), null);
+    }
+
+    .headline, .headline p {
+        @include margin($top: scut-rem($sm));
+    }
+
+    .article-summary p {
+        @include margin($bottom: scut-rem(0));
+    }
+
+    .article-summary:nth-child(odd) {
+        @include margin($right: scut-rem($xs));
+    }
+      
+    .article-summary:nth-child(even) {
+        @include margin($left: scut-rem($xs));
+    }
+
+    .about-content {
+        @include margin($left: scut-rem($xs));
+    }
+    
+    .small-img {
+        @include margin($right: scut-rem($xs));
+    }
+
+
+    .collections-pagination {
+
+        &-item {
+        @include padding($right: scut-rem($sm),$top: scut-rem($xs),$bottom: scut-rem($xs));
+        margin: 0;
+        display: inline-block;
+        }
+      
+        &-item:nth-child(even) {
+          border-left: solid scut-rem(1) $dark-grey;
+          @include padding($left: scut-rem($sm));
+          text-align: left;
+          float:none;
+        }
+      }
+      
+    
+    nav h1 {
+        font-size: scut-rem(22);
+        line-height: scut-rem(30);
+        display: inline;
+    }
+
+    h1 {
+        @include typeset(neptune);
+    }
+
+    .headline .client {
+        @include typeset(mars);
+        font-weight: 700;
+        color: $mid-grey;
+    }
+
+    h2 {
+        @include typeset(uranus);
+    }
+
+    h3 {
+        @include typeset(venus-bold);
+    }
+
+
+    #circle {
+        @include circle(scut-rem(70));
+    }
+
+    nav a:focus{
+        margin-left: 0px;
+    }
+    .formbutton {
+        float: left;
+        width: auto;
+      } 
+}
+
+
+@media (min-width: map-get($breakpoints, md)) {  
+    @include grid-md;
+    @include grid-cols-md;
+
+    main {
+        padding-bottom: scut-rem(50);
+    }
+
+    .headline, .headline p {
+        @include margin($top: scut-rem($md));
+    }
+
+    .content {
+        @include margin($top: scut-rem($sm));
+    }
+
+    .main-img {
+        @include margin($bottom: scut-rem($md));
+          &:not(:first-child) {
+            @include margin($top: scut-rem($md));
+          }
+    }
+
+    h1 {
+     @include typeset(saturn);
+    }
+
+    h2 {
+        @include typeset(uranus);
+    }
+
+    #circle {
+        @include circle(scut-rem(83)); 
+    }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+    @include grid-lg;
+    @include grid-cols-lg;
+
+    main {
+        padding-bottom: scut-rem(60);
+    }
+
+    .headline, .headline p {
+        @include margin($top: scut-rem($lg));
+    }
+
+    h1 {
+        @include typeset(jupiter);
+    }
+
+    .headline .client {
+        @include typeset(earth);
+        font-weight: 700;
+        color: $mid-grey;
+    }
+
+    h2 {
+        @include typeset(neptune);
+    }
+
+    #circle {
+        @include circle(scut-rem(101));
+    }
+
+}

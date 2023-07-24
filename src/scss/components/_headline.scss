@@ -1,0 +1,18 @@
+// ======================================
+//  Headline
+// ======================================
+
+.headline, .title, .headline p {
+    @include margin($top: scut-rem($xs));
+    @include margin($bottom: scut-rem($xs));
+    p {
+        font-size: scut-rem(20);
+        line-height: scut-rem(30); 
+    }
+}
+
+
+.headline .client {
+    display: block;
+    margin-bottom: 0;
+}
