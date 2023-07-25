@@ -56,7 +56,7 @@ summary: Supporting low mood and wellbeing in young people
 </div>
 
 <p class="article-content">
-        In collaboration with Carbon Studio, we incorporated illustrations and videos into the design to make it informative and appealing.
+        In collaboration with <a href="https://carbonstudio.co.uk/" aria-label="Carbon Studio">Carbon Studio</a>, we incorporated illustrations and videos into the design to make it informative and appealing.
 </p>
 <h2 class="article-content">
         Evaluation and feasibility study
