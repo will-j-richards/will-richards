@@ -29,8 +29,9 @@ title: Contact
     <label class="form-input-label" aria-label="Message" for="feedback">Message</label>
     <textarea class="form-input-textarea" id="feedback" name="feedback" rows="8"></textarea>
     <!-- add hidden Honeypot input to prevent spams -->
-    <label type="hidden">
-      Don’t fill this out if you’re human: 
+    <label type="hidden" style="display:none !important">
+      Don’t fill this out if you’re human:
+    </label>
     <input type="hidden" name="bot-field" style="display:none !important">
     </label>
     <button id="formbutton" class="formbutton" type="submit">Send contact details</button>
