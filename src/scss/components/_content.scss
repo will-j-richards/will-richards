@@ -35,11 +35,26 @@ ul.about-list {
   @include margin($bottom: scut-rem($md));
 }
 
+ul.article-list {
+  display: block;
+  list-style-type: '\2014';
+  @include margin($bottom: scut-rem($xs));
+  margin-top: 0;
+  padding: 0;
+}
+
 .about-list li {
   margin-left: 1.5rem;
   @include margin($bottom: scut-rem($xs));
   @include padding($left: scut-rem($xs));
 }
+
+.article-list li {
+  margin-left: 2rem;
+  @include margin($bottom: scut-rem(calc($xs / 2)));
+  @include padding($left: scut-rem(calc($xs / 2)));
+}
+
 
 .about-list li:last-child {
   @include margin($bottom: scut-rem($sm));

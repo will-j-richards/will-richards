@@ -154,7 +154,7 @@ footer {
     @include grid-col($col: #{4/13});
   }
 
-  .article-content, .form-content, .form-checkbox {
+  .article-content, .form-content, .form-checkbox, .article-list {
     @include grid-col($col: #{1/13});
   }
 
@@ -166,7 +166,7 @@ footer {
     @include grid-col($col: #{1/4});
   }
 
-  .main-img , .collections-pagination {
+  .main-img, .main-img-noborder, .collections-pagination {
     @include grid-col($col: #{1/13});
   }
 
@@ -279,7 +279,7 @@ footer {
     @include grid-col($col: #{2/12});
   }
 
-  .article-content, .form-content {
+  .article-content, .form-content, .article-list {
     @include grid-col($col: #{1/9});
   }
 

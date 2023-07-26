@@ -50,7 +50,7 @@
     }
   }
 
-.main-img {
+.main-img, .main-img-noborder {
   @include margin($bottom: scut-rem($sm));
     &:not(:first-child) {
       @include margin($top: scut-rem($sm));
@@ -60,4 +60,8 @@
 .main-img img {
   border: 1px solid;
   border-color: $light-grey;
+}
+
+.main-img-noborder img {
+  border: 0;
 }
