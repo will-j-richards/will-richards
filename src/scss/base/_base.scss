@@ -38,6 +38,11 @@ p {
   margin: 0;
 }
 
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   @include typeset(uranus);
   margin: 0;

@@ -58,7 +58,7 @@ summary: A new publishing service for Census 2021 data
   </figure>
 </div>
 <p class="article-content">
-  We mapped out the user journeys with known personas across a task model, which helped us to visualise the various touch points across the website when users had a need for data. 
+  We mapped out user journeys using known personas within a task model. This visualisation helped us identify the various touchpoints across the website that users interacted with when they had a need for data. 
 </p>
 <div class="main-img">
 <figure>

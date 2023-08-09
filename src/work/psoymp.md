@@ -10,6 +10,8 @@ work-examples:
     alt: "Rehearsals and testing the system"
   - img: "../media/psoymp-rehearsals.png"
     alt: "Early concepts"
+  - img: "../media/choreographic-system.png"
+    alt: "Front stage flow of the choreographic system"
   - img: "../media/psoymp-mobile.png"
     alt: "The UI for the mobile web application was simplified"
   - img: "../media/psoymp-online.png"
@@ -37,8 +39,8 @@ summary: Empowering the audience as collaborators and co-creators
     <strong>The audience types were as follows:</strong>
 </p> 
 <ul class="article-list">
-    <li>A theatre audience using a mobile phone or a suitable connected device</li> 
-    <li>An online audience using a desktop computer, laptop, or tablet</li> 
+    <li>A theatre audience using a mobile phone or a compatible connected device.</li> 
+    <li>An online audience using a desktop computer, laptop, or tablet.</li> 
 </ul>
 
 <p class="article-content">
@@ -50,14 +52,19 @@ summary: Empowering the audience as collaborators and co-creators
 </h2>
 
 <p class="article-content">
-    Initially, we discussed developing a native application; however, considering the variety of mobile devices and time frame, web-based technologies seemed most applicable. It was essential for the user experience not to rely on the audience downloading a mobile application prior to a performance. 
+    Initially, we discussed developing a native application; however, considering the following factors, we decided to develop a web application:
 </p>
+<ul class="article-list">
+    <li>The plethora of mobile devices on the market.</li> 
+    <li>The advantageous time frame and ease of prototyping in HTML and Javascript.</li> 
+    <li>The potential requirement for the audience to download a mobile app, which would introduce friction to the user experience.</li>
+</ul>
 <h2 class="article-content">
-    Embrace failure
+    Learning to embrace failure
 </h2>
 
 <p class="article-content">
-    As designers and technologists we wanted to push technology to make the experience interactive, whilst our partners aims were to create a truly engaging and credible performance. 
+    As designers and technologists we wanted to push technology to make the experience interactive, whilst our partners aims were to create a engaging and credible performance. 
 </p>
 
 <div class="main-img-noborder">
@@ -66,7 +73,7 @@ summary: Empowering the audience as collaborators and co-creators
 </div>
 
 <p class="article-content">
-    Our first research session took place at Sherman Cymru in Cardiff. The performance involved a large audience in a midscale theatre with up to 25 dancers on stage. Feedback from the event was polarised, with some audience members hating it and others enjoying it. The audience percieved the experience as bewildering, compounded by the sheer volume of activity on stage and the complexity of the digital experience, along with technical issues and audience expectations. 
+    Our first research session took place at Sherman Cymru in Cardiff. The performance involved a large audience in a mid-scale theatre with up to 25 dancers on stage. Feedback from the event was polarised, with some audience members disliking it while others enjoying it. The majority perceived the experience as bewildering, a feeling compounded by the sheer volume of activity on stage and the complexity of the digital experience. Technical issues and audience expectations further contributed to this.
 </p>
 <h2 class="article-content">
     Use technology to solve problems
@@ -75,15 +82,31 @@ summary: Empowering the audience as collaborators and co-creators
     Based on the audience feedback, we went back to the drawing board. While the performance may have failed to address the original problem, we learned valuable lessons. The most obvious, use technology to solve problems, not create them. 
 </p>
 <p class="article-content">
-    <strong>Based on the feedback we decided to focus on two things:</strong>
+    <strong>Based on the feedback, we decided to focus on two things:</strong>
 </p> 
 <ul class="article-list">
     <li>Audience collaboration</li> 
     <li>The purity of the performance</li> 
 </ul>
-<div class="main-img">
+<div class="main-img-noborder">
   <figure>
     {% assign example = work-examples[2] %}
+    {% myImage example.img example.alt 'example-img' %}
+    <figcaption>
+        Front stage flow of the choreographic system post audience feedback
+    </figcaption>
+  </figure>
+</div>
+<ol class="article-list">
+    <li>Before the performance begins, the audience is invited to log onto the website and submit a story. </li> 
+    <li>Stories that pass moderation are projected onto the big screen at the back of the stage. Using their phones, the audience can vote for their favorite stories.</li>
+    <li>The choreographer and dancers then take the most popular story and start to work on simple vignettes.</li>
+    <li>The audience is invited to vote on certain characteristics, such as choosing dancers, determining the pace of the performance, or shaping the movements.</li>
+    <li>The choreographer invites the audience to vote on whether a story development should continue. If the audience decides to move on, the process starts again.</li> 
+</ol>
+<div class="main-img">
+  <figure>
+    {% assign example = work-examples[3] %}
     {% myImage example.img example.alt 'example-img' %}
     <figcaption>
         The UI for the mobile web application was simplified
@@ -91,11 +114,8 @@ summary: Empowering the audience as collaborators and co-creators
   </figure>
 </div>
 <p class="article-content">
-    The third test took place at Aberystwyth University and involved a smaller audience. An open dialogue with the audience and performers was established. The mobile device became a useful tool to facilitate ideas and capture feedback. This approach demystified the on-stage activities while still engage the audience as collaborators and co-creators.
+    The third test took place at Aberystwyth University and involved a smaller audience. An open dialogue with the audience and performers was established. The mobile device became a useful tool to facilitate ideas and capture feedback. This approach demystified the on-stage activities, while still engaging the audience as collaborators and co-creators.
 </p> 
-<p class="article-content">
-    During this test, the audience was invited to submit stories via their phones, which were then projected onto the stage. Dancers interpreted the stories voted on by the audience into movement. The audience were intermittently invited to decide the outcome of each performance, such as increasing the pace or the number of dancers involved, or choosing another story. 
-</p>
 <p class="article-content">
     The final test at Y Fwrness, Llanelli, involved streaming the performance online. A simple user UI was developed, enabling the online audience to: 
 </p>
@@ -109,7 +129,7 @@ summary: Empowering the audience as collaborators and co-creators
 </p>
 <div class="main-img-noborder">
   <figure>
-    {% assign example = work-examples[3] %}
+    {% assign example = work-examples[4] %}
     {% myImage example.img example.alt 'example-img' %}
     <figcaption>
       The UI enabling an online audience to particpate in the performance
