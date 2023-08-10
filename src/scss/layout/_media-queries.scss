@@ -35,6 +35,26 @@
         @include margin($right: scut-rem($xs));
     }
 
+    .tryptich1 {
+        @include padding($right: scut-rem(calc($xs / 4)));
+        @include margin($bottom: scut-rem($sm)); 
+    }
+      
+   .tryptich2 {
+        @include padding($left: scut-rem(calc($xs / 4)));
+        @include margin($bottom: scut-rem($sm));
+    }
+
+    .tryptich3 {
+        @include padding($right: scut-rem(calc($xs / 4)));
+        @include margin($bottom: scut-rem($sm), $top: scut-rem($xs)); 
+    }
+      
+   .tryptich4 {
+        @include padding($left: scut-rem(calc($xs / 4)));
+        @include margin($bottom: scut-rem($sm), $top: scut-rem($xs));
+    }
+
 
     .collections-pagination {
 

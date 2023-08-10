@@ -20,28 +20,29 @@ main {
 header{
   grid-row: 1;
   @include display-grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
 main {
   @include grid-col($row: 2);
   @include display-grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
 nav {
-  @include grid-col($col: #{1/6});
+  @include grid-col($col: #{1/4});
 }
+
 
 
 .collections-pagination {
-@include grid-col($col: #{1/6});
+@include grid-col($col: #{1/4});
 }
 
 .headline, .content {
-  @include grid-col($col: #{1/5});
+  @include grid-col($col: #{1/4});
+  grid-template-columns: repeat(3,1fr);
 }
-
 
 
 #left-spacer-row1 {
@@ -168,6 +169,14 @@ footer {
 
   .main-img, .main-img-noborder, .collections-pagination {
     @include grid-col($col: #{1/13});
+  }
+
+  .tryptich1, .tryptich3 {
+    @include grid-col($col: #{1/7});
+  }
+
+  .tryptich2, .tryptich4 {
+    @include grid-col($col: #{7/13});
   }
 
   nav {

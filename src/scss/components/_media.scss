@@ -5,7 +5,7 @@
 .media {
     background-color: $yellow;
     display: block;
-  }
+}
   
   .media-container {
     margin: 0;
@@ -64,4 +64,22 @@
 
 .main-img-noborder img {
   border: 0;
+}
+
+.tryptich1 {
+  @include margin($bottom: scut-rem($xs));
+}
+
+.tryptich3 {
+  @include margin($bottom: scut-rem($xs));
+  @include margin($top: scut-rem($xs));
+}
+
+
+.tryptich3 {
+  @include margin($top: scut-rem($sm));
+}
+
+.tryptich2, .tryptich4 {
+  @include margin($bottom: scut-rem($sm));
 }

@@ -51,13 +51,13 @@ summary: A new publishing service for Census 2021 data
 <div class="main-img">
   <figure>
     {% assign example = work-examples[1] %}
-    {% myImage example.img example.alt 'example-img' %}
+    {% myImage example.img example.alt 'example-img' 'taskmodel' %}
   <figcaption>
       A task model developed in <a href="https://miro.com/app/board/uXjVMKugJEw=/" aria-label="Miro">Miro</a> to map out get census data user journeys
   </figcaption>
   </figure>
 </div>
-<p class="article-content">
+<p class="article-content" id="taskmodel">
   We mapped out user journeys using known personas within a task model. This visualisation helped us identify the various touchpoints across the website that users interacted with when they had a need for data. 
 </p>
 <div class="main-img">

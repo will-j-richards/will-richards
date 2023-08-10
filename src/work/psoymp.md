@@ -6,10 +6,14 @@ cover-img: '/media/psoymp-cover.png'
 layout: layouts/article.njk
 date: 2023-01-01
 work-examples:
-  - img: "../media/psoymp-stage.png"
-    alt: "Rehearsals and testing the system"
-  - img: "../media/psoymp-rehearsals.png"
-    alt: "Early concepts"
+  - img: "../media/psoymp-dancer.png"
+    alt: "Dancer on stage working on a story projected behind them"
+  - img: "../media/psoymp-dancegroup.png"
+    alt: "A group of dancers interpretating a selected story"
+  - img: "../media/psoymp-rehearsal.png"
+    alt: "Bugfixing during rehearsals"
+  - img: "../media/psoymp-bugfixing.png"
+    alt: "Bugfixing during rehearsals"
   - img: "../media/choreographic-system.png"
     alt: "Front stage flow of the choreographic system"
   - img: "../media/psoymp-mobile.png"
@@ -20,9 +24,13 @@ summary: Empowering the audience as collaborators and co-creators
 ---
 
 
-<div class="main-img-noborder">
+<div class="tryptich1">
     {% assign example = work-examples[0] %}
-    {% myImage example.img example.alt 'example-img' %}
+    {% myImage example.img example.alt 'tryptich-img' %}
+</div>
+<div class="tryptich2">
+    {% assign example = work-examples[1] %}
+    {% myImage example.img example.alt 'tryptich-img' %}
 </div>
 
 <h2 class="article-content">
@@ -67,11 +75,14 @@ summary: Empowering the audience as collaborators and co-creators
     As designers and technologists we wanted to push technology to make the experience interactive, whilst our partners aims were to create a engaging and credible performance. 
 </p>
 
-<div class="main-img-noborder">
-    {% assign example = work-examples[1] %}
-    {% myImage example.img example.alt 'example-img' %}
+<div class="tryptich3">
+    {% assign example = work-examples[2] %}
+    {% myImage example.img example.alt 'tryptich-img' %}
 </div>
-
+<div class="tryptich4">
+    {% assign example = work-examples[3] %}
+    {% myImage example.img example.alt 'tryptich-img' %}
+</div>
 <p class="article-content">
     Our first research session took place at Sherman Cymru in Cardiff. The performance involved a large audience in a mid-scale theatre with up to 25 dancers on stage. Feedback from the event was polarised, with some audience members disliking it while others enjoying it. The majority perceived the experience as bewildering, a feeling compounded by the sheer volume of activity on stage and the complexity of the digital experience. Technical issues and audience expectations further contributed to this.
 </p>
@@ -90,14 +101,14 @@ summary: Empowering the audience as collaborators and co-creators
 </ul>
 <div class="main-img-noborder">
   <figure>
-    {% assign example = work-examples[2] %}
-    {% myImage example.img example.alt 'example-img' %}
+    {% assign example = work-examples[4] %}
+    {% myImage example.img example.alt 'example-img' 'choreographic-system' %}
     <figcaption>
         Front stage flow of the choreographic system post audience feedback
     </figcaption>
   </figure>
 </div>
-<ol class="article-list">
+<ol class="article-list" id="choreographic-system">
     <li>Before the performance begins, the audience is invited to log onto the website and submit a story. </li> 
     <li>Stories that pass moderation are projected onto the big screen at the back of the stage. Using their phones, the audience can vote for their favorite stories.</li>
     <li>The choreographer and dancers then take the most popular story and start to work on simple vignettes.</li>
@@ -106,7 +117,7 @@ summary: Empowering the audience as collaborators and co-creators
 </ol>
 <div class="main-img">
   <figure>
-    {% assign example = work-examples[3] %}
+    {% assign example = work-examples[5] %}
     {% myImage example.img example.alt 'example-img' %}
     <figcaption>
         The UI for the mobile web application was simplified
@@ -129,7 +140,7 @@ summary: Empowering the audience as collaborators and co-creators
 </p>
 <div class="main-img-noborder">
   <figure>
-    {% assign example = work-examples[4] %}
+    {% assign example = work-examples[6] %}
     {% myImage example.img example.alt 'example-img' %}
     <figcaption>
       The UI enabling an online audience to particpate in the performance

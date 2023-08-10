@@ -17,5 +17,4 @@ toggleButton.addEventListener('click', function() {
     this.setAttribute('aria-expanded', 'true');
     // menuItems[0].focus(); // Uncomment this line if you want to focus on the first menu item
   }
-
 });

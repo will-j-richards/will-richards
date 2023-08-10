@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/media");
   eleventyConfig.addPassthroughCopy("src/css");
 
-  eleventyConfig.addLiquidShortcode("myImage", async function (src, alt, className) {
+  eleventyConfig.addLiquidShortcode("myImage", async function (src, alt, className, describedById) {
     if (!src) {
       throw new Error(`Missing \`src\` on myImage shortcode from: ${src}`);
     }
@@ -47,7 +47,16 @@ module.exports = function (eleventyConfig) {
       `;
       imgWidths = "768px";
       mediaQuery = `(-webkit-min-device-pixel-ratio: 1.5)`;
+    } else if (className === "tryptich-img") {
+      sizes = `
+      (min-width: 1448px) 768px,
+      (min-width: 668px)  384px,
+      100vw
+    `;
+      imgWidths = "768px";
+      mediaQuery = `(-webkit-min-device-pixel-ratio: 1.5)`;
     }
+    
 
     for (let format in metadata) {
       let imageData = metadata[format];
@@ -63,7 +72,13 @@ module.exports = function (eleventyConfig) {
     }
 
     let defaultImage = metadata.png[0];
-    let imgTag = `<img src="/media/${path.basename(defaultImage.url)}" alt="${alt}" width="${imgWidths}" height="auto" loading="lazy">`;
+    let imgTag = `<img src="/media/${path.basename(defaultImage.url)}" alt="${alt}" width="${imgWidths}" height="auto" loading="lazy"`;
+    
+    if (describedById) {
+      imgTag += ` aria-describedby="${describedById}"`;
+    }
+    
+    imgTag += `>`;
 
     return `<picture>${imageSources.join("")}${imgTag}</picture>`;
   });
@@ -80,5 +95,4 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
-
 
