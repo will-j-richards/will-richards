@@ -23,7 +23,7 @@ h2.article-content {
 }
 
 .about-content h2 {
-  @include margin($top: scut-rem($md), $bottom: scut-rem($sm));
+  @include margin($top: scut-rem($md), $bottom: scut-rem($18));
   @include typeset(venus);
   font-weight: 700;
 }
